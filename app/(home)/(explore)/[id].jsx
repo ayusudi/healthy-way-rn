@@ -14,7 +14,7 @@ export default function Smoothie() {
         maxBodyLength: Infinity,
         url: 'https://eu-central-1.data.tidbcloud.com/api/v1beta/app/dataapp-EHHkQDsw/endpoint/smoothies/id',
         headers: {
-          'Authorization': 'Basic MDE5Q0M4VTA6MWNhNjI1MGQtODQxZC00ZGE0LWFmYjUtNDIxOTQwYjUwYzZl'
+          'Authorization': `Basic ${process.env.EXPO_PUBLIC_API_KEY}`
         },
         data: { id }
       }

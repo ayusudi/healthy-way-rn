@@ -9,13 +9,14 @@ export default function List() {
   const [text, setText] = useState('')
   const [data, setData] = useState([])
   const fetchData = async () => {
+    console.log(process.env);
     try {
       let config = {
         method: 'get',
         maxBodyLength: Infinity,
         url: 'https://eu-central-1.data.tidbcloud.com/api/v1beta/app/dataapp-EHHkQDsw/endpoint/smoothies',
         headers: {
-          'Authorization': `Basic ${process.env.REACT_APP_API_KEY}`
+          'Authorization': `Basic ${process.env.EXPO_PUBLIC_API_KEY}`
         }
       };
       let response = await axios.request(config)
